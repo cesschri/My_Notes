@@ -36,3 +36,22 @@ with(mtcars, tapply(mpg, cyl, mean))
 colSums(mtcars)
 rowSums(mtcars)
 
+
+
+
+####################### swirl Notes ##################################
+getwd()    # get working dir
+setwd("dir")
+ls()  dir()    # display objects in workspace
+List all the files in your working directory using list.files() or dir()
+Using the args() function on a function name is also a handy way to see what arguments a function can take.
+args(list.files)
+Create a file in your working directory called "mytest.R" using the file.create() function.
+file.exists("mytest.R")
+file.info("mytest.R")
+file.info("mytest.R")$mode
+file.rename("mytest.R", "mytest2.R")
+file.copy("mytest2.R", "mytest3.R")
+file.path('folder1', 'folder2')
+dir.create(file.path("testdir2", "testdir3"), recursive = TRUE)
+unlink("testdir2", recursive=TRUE)  # delete dir
