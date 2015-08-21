@@ -1,3 +1,10 @@
+echo # My_Notes >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/cesschri/My_Notes.git
+git push -u origin master
+
 library(datasets)
 data(iris)
 # mean of Sepal.Length for each Species
