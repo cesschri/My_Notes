@@ -7,14 +7,17 @@ git push -u origin master
 
 library(datasets)
 data(iris)
-# mean of Sepal.Length for each Species
-tapply(iris$Sepal.Length, iris$Species, mean)
 
+##### Find the mean of Sepal.Length for each Species
+tapply(iris$Sepal.Length, iris$Species, mean)
 # another way...
 i <- tapply(iris$Sepal.Length, iris$Species, mean)
 i["virginica"]
-
 # one line way...
 tapply(iris$Sepal.Length, iris$Species, mean)["virginica"]
 
-....
+## Question 2
+## Continuing with the 'iris' dataset from the previous Question, what R code returns a vector 
+## of the means of the variables 'Sepal.Length', 'Sepal.Width', 'Petal.Length', and 'Petal.Width'?
+apply(iris[, 1:4], 2, mean)
+# all rows, cols 1-4, 2 means the column dimension or "margin" as they call it, mean is the function
