@@ -1,0 +1,11 @@
+library(datasets)
+data(iris)
+# mean of Sepal.Length for each Species
+tapply(iris$Sepal.Length, iris$Species, mean)
+
+# another way...
+i <- tapply(iris$Sepal.Length, iris$Species, mean)
+i["virginica"]
+
+# one line way...
+tapply(iris$Sepal.Length, iris$Species, mean)["virginica"]
