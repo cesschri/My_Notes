@@ -5,9 +5,10 @@ git commit -m "first commit"
 git remote add origin https://github.com/cesschri/My_Notes.git
 git push -u origin master
 
+########################### QUIZ 3 ###############################
+Question 1
 library(datasets)
 data(iris)
-
 ##### Find the mean of Sepal.Length for each Species
 tapply(iris$Sepal.Length, iris$Species, mean)
 # another way...
@@ -21,3 +22,17 @@ tapply(iris$Sepal.Length, iris$Species, mean)["virginica"]
 ## of the means of the variables 'Sepal.Length', 'Sepal.Width', 'Petal.Length', and 'Petal.Width'?
 apply(iris[, 1:4], 2, mean)
 # all rows, cols 1-4, 2 means the column dimension or "margin" as they call it, mean is the function
+
+## Question 3
+## Load the 'mtcars' dataset in R with the following code
+library(datasets)
+data(mtcars)
+## There will be an object names 'mtcars' in your workspace. You can find some information about the dataset by running
+?mtcars
+## How can one calculate the average miles per gallon (mpg) by number of cylinders in the car (cyl)?
+with(mtcars, tapply(mpg, cyl, mean))
+
+# sum of cols or rows best way...
+colSums(mtcars)
+rowSums(mtcars)
+
